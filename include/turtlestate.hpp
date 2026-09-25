@@ -1,19 +1,25 @@
 #include "../include/vector2d.hpp"
+#include <stack>
 
 class TurtleState {
 private:
+	Vector2D start_pos;
+	Vector2D end_pos;
 	constexpr static double pi = 3.14159265358979323846;
-	const double gamma = 25; // Quanto o ramo vai girar (isso pode ser modificado...)
+	double gamma = 25; // Quanto o ramo vai girar (isso pode ser modificado...)
 	Vector2D position {0.0, 0.0}; // posição atual da "tartaruga"
-	const double l {10.0}; // esse valor muda, é quanto F anda no plano. Mudar para diminuir conforme a necessidade!
+	double l {10.0}; // esse valor muda, é quanto F anda no plano. Mudar para diminuir conforme a necessidade!
 	float angle {0.0}; // descrito em radianos 
 public:
 	TurtleState() {
 		this->angle = deg_to_rad(angle);
 	}
+	
+	Vector2D getPosition() { return position; }
 
 	double deg_to_rad(double this_angle);
-	void update_position(const double& angle);
+	void update_position();
 	void rotate(const char side);
 	void create_branch(char savepoint);
+	void draw(char c, std::stack<TurtleState>& state_stack);
 };
