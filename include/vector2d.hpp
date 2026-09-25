@@ -1,3 +1,6 @@
+#ifndef VECTOR_2D_HPP
+#define VECTOR_2D_HPP
+
 struct Vector2D {
 	double x {0.0};
 	double y {0.0};
@@ -26,3 +29,5 @@ struct Vector2D {
 		return false;
 	}
 };
+
+#endif
