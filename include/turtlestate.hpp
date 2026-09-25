@@ -16,6 +16,8 @@ public:
 	}
 	
 	Vector2D getPosition() { return position; }
+	Vector2D getStartPos() { return start_pos; }
+	Vector2D getEndPos() { return end_pos; }
 
 	double deg_to_rad(double this_angle);
 	void update_position();
