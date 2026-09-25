@@ -151,7 +151,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Project
+CMAKE_PROJECT_NAME:STATIC=TreeSystem
 
 //Value Computed by CMake
 CMAKE_PROJECT_SPDX_LICENSE:STATIC=
@@ -229,6 +229,15 @@ Project_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Project_SOURCE_DIR:STATIC=/home/alvkro/Projects/TreeSystem
+
+//Value Computed by CMake
+TreeSystem_BINARY_DIR:STATIC=/home/alvkro/Projects/TreeSystem/build
+
+//Value Computed by CMake
+TreeSystem_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+TreeSystem_SOURCE_DIR:STATIC=/home/alvkro/Projects/TreeSystem
 
 
 ########################

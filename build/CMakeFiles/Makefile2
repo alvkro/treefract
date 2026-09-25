@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /home/alvkro/Projects/TreeSystem/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/TreeSystem.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/TreeSystem.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,8 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/TreeSystem.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TreeSystem.dir
+
+# All Build rule for target.
+CMakeFiles/TreeSystem.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TreeSystem.dir/build.make CMakeFiles/TreeSystem.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TreeSystem.dir/build.make CMakeFiles/TreeSystem.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alvkro/Projects/TreeSystem/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target TreeSystem"
+.PHONY : CMakeFiles/TreeSystem.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TreeSystem.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alvkro/Projects/TreeSystem/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TreeSystem.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alvkro/Projects/TreeSystem/build/CMakeFiles 0
+.PHONY : CMakeFiles/TreeSystem.dir/rule
+
+# Convenience name for target.
+TreeSystem: CMakeFiles/TreeSystem.dir/rule
+.PHONY : TreeSystem
+
+# codegen rule for target.
+CMakeFiles/TreeSystem.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TreeSystem.dir/build.make CMakeFiles/TreeSystem.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/alvkro/Projects/TreeSystem/build/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target TreeSystem"
+.PHONY : CMakeFiles/TreeSystem.dir/codegen
+
+# clean rule for target.
+CMakeFiles/TreeSystem.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TreeSystem.dir/build.make CMakeFiles/TreeSystem.dir/clean
+.PHONY : CMakeFiles/TreeSystem.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
