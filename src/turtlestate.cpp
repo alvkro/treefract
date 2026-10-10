@@ -15,7 +15,7 @@ void TurtleState::rotate(const char side) {
 }
 
 void TurtleState::draw(char c, std::stack<TurtleState>& state_stack) {
-	if (c == 'F') {
+	if (c == 'F' || c == 'G') {
 		start_pos = this->position;
 		update_position();
 		end_pos = this->position;
