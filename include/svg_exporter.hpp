@@ -24,7 +24,6 @@ public:
                      double width = 800.0, 
                      double height = 800.0, 
                      double padding = 40.0) {
-        
         if (lines.empty()) {
             std::cerr << "[SVGExporter] Aviso: Nenhum segmento para exportar.\n";
             return false;
