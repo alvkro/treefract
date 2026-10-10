@@ -20,6 +20,7 @@ A conversão da string em geometria visual é realizada através de um autômato
 - **`TurtleState`:** Gerencia o estado atual da tartaruga em tempo de execução, incluindo posição \\((x, y)\\) e ângulo de direção mantido nativamente em radianos.
 - **`Vector2D`:** Estrutura de matemática vetorial customizada com sobrecarga de operadores (`+`, `+=`, `==` com tolerância de precisão `epsilon` de 2 casas decimais) para calcular deslocamentos trigonométricos \\((\Delta x = L \cdot \cos\theta, \Delta y = L \cdot \sin\theta)\\).
 - **Gerenciamento de Ramificações (`std::stack`):** Uso de uma pilha de estados para salvar (`[`) e restaurar (`]`) as coordenadas e o ângulo da tartaruga, permitindo desenhar galhos paralelos e estruturas ramificadas.
+- **Configurações em .ini:** Para facilitar a geração das estruturas, é utilizado um arquivo `config.ini` para modificar características do fractal. Siga o exemplo presente no projeto!
 
 ## Mapeamento da Gramática
 
@@ -30,5 +31,12 @@ A conversão da string em geometria visual é realizada através de um autômato
 | **`-`** | Gira a tartaruga em \\(-\gamma\\) graus (sentido horário) |
 | **`[`** | **Push:** Empilha o estado atual `(posição, ângulo)` para criar uma ramificação |
 | **`]`** | **Pop:** Desempilha e restaura o último estado salvo para retornar à bifurcação |
+
+## Usage
+- Para executar o projeto, crie uma pasta build utilizando `make`. Ao criar o executável, rode o programa com os seguintes argumentos:
+```
+./TreeSystem <numero de iterações> <localização do arquivo .ini>
+```
+- O arquivo "modelo" de configurações `.ini` está presente no projeto, é possível adicionar/modificar regras, axioma, gamma, L, e por aí vai. Faça bom proveito :).
 
 
