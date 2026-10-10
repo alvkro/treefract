@@ -1,8 +1,8 @@
 #include "../include/lsystem.hpp"
 #include "..//include/runningopt.hpp"
 #include "../include/turtlestate.hpp"
+#include "../include/ini_parsing.hpp"
 #include "../include/svg_exporter.hpp"
-#include <iostream>
 #include <stack>
 #include <vector>
 
@@ -16,14 +16,12 @@ int main(int argc, char* argv[]) {
 	std::vector<LineSegment> lines;
 
 	run_opt.validate_arguments(argc, argv);
-	lsystem.setAxiom("X");
-	lsystem.addRule('F', "FF");
-	lsystem.addRule('X', "F-[[X]+X]+F[+FX]-X");
+	turtlestate.parse_config(argc, argv, lsystem);
 	output = lsystem.generate(run_opt.n_iterations);
 	
 	for (auto i : output) {
 		turtlestate.draw(i, state_stack);
-		if (i == 'F') {
+		if (i == 'F'|| i == 'G') {
 			lines.push_back({turtlestate.getStartPos(), turtlestate.getEndPos()});
 		}
 	}
