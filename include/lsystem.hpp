@@ -10,7 +10,8 @@ public:
     void setAxiom(const std::string& axiom);
     void addRule(char symbol, const std::string& rule);
     std::string generate(value_type iterations);
-    std::string parse_axiom(std::string& current_axiom); 
+    std::string parse_axiom(std::string& current_axiom);
+    void save_rules_ini(std::string& str);
 
     std::string getAxiom();
     std::unordered_map<char, std::string> getRules();
